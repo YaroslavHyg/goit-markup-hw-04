@@ -17,7 +17,6 @@ img{
 }
 
 
-
 .body {
         font-family: Roboto, sans-serif;
         width: 1440px;
@@ -46,7 +45,6 @@ img{
         margin: auto;
         padding-left: 15px;
         padding-right: 15px;
-        /* outline: 1px solid tomato */
 }
 .list-top{
         align-items:flex-start;
@@ -168,11 +166,24 @@ img{
 }
 
 /* --------------HERO----------- */
-.hero {
-        background: #2E2F42;
-        padding: 192px 474px;
+.hero { 
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        background-color:#2E2F42;
+        background-image: linear-gradient(to right,
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)),
+        url("../images/people-office.jpg");
+        padding-top: 192px;
+        padding-bottom: 192px;
         margin-top: 0px;
-}
+        max-width: 1440px;
+        height: 603px;
+        background-position: center;
+        background-size: cover;
+        margin-left: auto;
+        margin-right: auto;
+ }       
+
 .main_top {
         font-weight: 600;
         font-size: 56px;
@@ -181,18 +192,15 @@ img{
         letter-spacing: 0.02em;
         box-sizing: border-box;
         text-align: center;
-        /* margin: auto; */
         margin-bottom: 48px;
-        width: 492px;
-        height: 120px;
-        /* margin-left: auto; */
-        /* margin-right: 0px; */
+        margin-top: 0px;
+        
 }
 /* ---------BUTTON----------- */
 .button{
         box-sizing: border-box;
         text-align: center;
-        border-radius: 4px;
+        
 }
 .btn {  
         cursor: pointer;
@@ -205,17 +213,21 @@ img{
         line-height: 1.2;
         color: #FFFFFF;
         letter-spacing: 0.04em;
-
+        border-radius: 4px;
 }
 .btn:hover{
         background: #4D5AE5;
+        border-radius: 4px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .btn:active{
         background-color:  #404BBF;
 }
 /* -------------CONTENT------------- */
-.p-content{
-
+.icon{
+        margin-bottom: 8px;
+        border-radius: 4px;
+        background-image: url(../images/svg/cloc.svg);
 }
 
 /* -----------What are we doing---------- */
@@ -225,21 +237,41 @@ img{
 }
 .list-work{
         width: 1128px;
-        height: 104px;
+        height: 224px;
 }
 .content{
         padding-top: 120px;
 }
-.list-content{
+.list-content button {
+        display: block;
         width: 264px;
-        height: 104px;
+        height: 112px;
+        padding: 0px;
+        border: none;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        background-position: center;
+        background-color:  #F4F4FD;
+        border-radius: 4px;
+        margin-bottom: 8px;
+}
+.cosmos{
+        background-image: url(../images/svg/cosmos.svg);
+}
+.antena{
+        background-image: url(../images/svg/antenna\.svg);
+}
+.clock{
+        background-image: url(../images/svg/clock.svg);
+}
+.diagram {
+        background-image: url(../images/svg/diagram.svg);
 }
 
 .list-work .list-content +.list-content{
         margin-left: 24px;
 }
 
-/* < !-- -----------What are we doing---------- --> */
 .list-info{
         width: 1128px;
         padding-top: 120px;
@@ -263,9 +295,10 @@ img{
         padding-bottom: 120px;
         /* outline: 1px solid red; */
 }
-.card-text{
+.card-text::after{
         margin-top: 32px;
         margin-bottom: 32px;
+
 
 }
 
@@ -294,6 +327,41 @@ img{
         margin: 0px;
         margin-bottom: 32px;
 }
+/* ------------customers------- */
+.customers{
+        margin-top: 120px;
+        margin-bottom: 120px;
+}
+.client-list{
+        margin-left: -24px;
+}
+.client-list li{
+        display: block;
+        width: 168px;
+        height: 88px;
+        padding: 0px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        background-position: center;
+        border: 1px solid #8E8F99;
+        border-radius: 4px;
+        flex-wrap: wrap;
+        margin-left: var(--card-set-gap-left);
+}
+.list-compani:hover{
+        fill: #4D5AE5;
+}
+.border:hover{
+        border: 1px solid #4D5AE5;
+}
+.list-compani {
+        width: 104px;
+        height: 56px;
+        margin-top: 16px;
+        margin-left: 32px;
+        fill:#8E8F99;
+}
+
 
 /* --------FOOTER-------- */
 .studio-footer-color {
@@ -353,7 +421,6 @@ img{
 }
 
 .list-foto > .item-foto{
-        /* outline: 1px solid teal; */
 
         flex-basis: calc(100% / 3) -24px;
 
@@ -368,9 +435,6 @@ img{
         margin-bottom: 61px;
 }
 
-.item-foto * {
-        /* outline: 1px solid coral; */
-}
 
 .card-content {
         margin-top: 32px;
@@ -382,3 +446,16 @@ img{
         background: #4D5AE5;
         color: #E7E9FC;
 }
+
+
+
+
+.actions{
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        outline: 1px solid black;
+}
+
+        
